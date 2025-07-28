@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Contemplative CSS Variables */
+:root {
+  --stone-black: #0a0a0a;
+  --stone-grey: #6b7280;
+  --stone-white: #e5e7eb;
+  --breathing-green: #22c55e;
+  --breathing-blue: #3b82f6;
+  --breathing-gold: #f59e0b;
+  --contemplative-white: #fafafa;
+  
+  /* Sacred timing variables */
+  --sacred-rhythm: 4s;
+  --contemplative-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --breathing-duration: 4s;
+}
+
+/* Base contemplative styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--contemplative-white) 0%, var(--stone-white) 100%);
+  color: var(--stone-black);
+  line-height: 1.618; /* Golden ratio */
+}
+
+/* Breathing animation utilities */
+@layer utilities {
+  .breathing-element {
+    animation: breathe var(--breathing-duration) ease-in-out infinite;
+  }
+  
+  .sacred-transition {
+    transition: all 0.4s var(--contemplative-ease);
+  }
+  
+  .contemplative-spacing {
+    padding: 1.618rem; /* Golden ratio spacing */
+  }
+  
+  .mobile-contemplative {
+    @apply px-4 py-6;
+  }
+  
+  .tablet-contemplative {
+    @apply px-8 py-12;
+  }
+  
+  .desktop-contemplative {
+    @apply px-16 py-24;
+  }
+}
+
+/* Mobile-first responsive contemplative design */
+@media (max-width: 767px) {
+  .contemplative-container {
+    @apply mobile-contemplative;
+  }
+  
+  .breathing-element {
+    animation-duration: 3s; /* Slightly faster on mobile for attention */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contemplative-container {
+    @apply tablet-contemplative;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contemplative-container {
+    @apply desktop-contemplative;
+  }
+}
+
+/* Accessibility and contemplative focus states */
+.sacred-focus {
+  @apply outline-none ring-2 ring-breathing-blue ring-opacity-50 ring-offset-2;
+}
+
+/* Loading states as meditation moments */
+.contemplative-loading {
+  @apply animate-sacred-pulse;
+}

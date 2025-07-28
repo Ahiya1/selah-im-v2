@@ -1,0 +1,70 @@
+/* Contemplative Design System Variables */
+
+/* Sacred Colors - Stone-like Foundation */
+:root {
+  --color-stone-black: #0a0a0a;
+  --color-stone-grey: #6b7280;
+  --color-stone-light: #9ca3af;
+  --color-stone-white: #e5e7eb;
+  
+  /* Breathing Colors - Life and Movement */
+  --color-breathing-green: #22c55e;
+  --color-breathing-green-light: #86efac;
+  --color-breathing-blue: #3b82f6;
+  --color-breathing-blue-light: #93c5fd;
+  --color-breathing-gold: #f59e0b;
+  --color-breathing-gold-light: #fde047;
+  
+  /* Contemplative Backgrounds */
+  --color-contemplative-white: #fafafa;
+  --color-contemplative-cream: #f9fafb;
+  
+  /* Sacred Timing - Natural Rhythms */
+  --timing-breath: 4s;
+  --timing-sacred-pulse: 6s;
+  --timing-contemplative: 0.8s;
+  --timing-meditation: 1.2s;
+  
+  /* Contemplative Easing */
+  --ease-contemplative: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-breathing: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-sacred: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Golden Ratio Spacing */
+  --space-phi: 1.618rem;
+  --space-phi-small: 1rem;
+  --space-phi-large: 2.618rem;
+  --space-phi-xl: 4.236rem;
+  
+  /* Contemplative Typography Scale */
+  --text-contemplative-xs: 0.75rem;
+  --text-contemplative-sm: 0.875rem;
+  --text-contemplative-base: 1rem;
+  --text-contemplative-lg: 1.125rem;
+  --text-contemplative-xl: 1.25rem;
+  --text-contemplative-2xl: 1.5rem;
+  --text-contemplative-3xl: 1.875rem;
+  
+  /* Mobile Contemplative Adjustments */
+  --mobile-space-phi: 1rem;
+  --mobile-text-scale: 0.9;
+  --mobile-breath-duration: 3s;
+}
+
+/* Mobile-first contemplative variables */
+@media (max-width: 767px) {
+  :root {
+    --timing-breath: var(--mobile-breath-duration);
+    --space-phi: var(--mobile-space-phi);
+  }
+}
+
+/* Sacred Z-index layers */
+:root {
+  --z-contemplative-background: 0;
+  --z-contemplative-content: 10;
+  --z-breathing-elements: 20;
+  --z-sacred-navigation: 30;
+  --z-modal-contemplative: 40;
+  --z-admin-overlay: 50;
+}
